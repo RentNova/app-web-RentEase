@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #2389FC;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #001F3F;
+    border-radius: 20px;
+}
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+body{
+    scrollbar-width: thin;
+    scrollbar-color: #001F3F #2389FC;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+h1 {font-size: 64px;}
+h2 {font-size: 32px;}
+h3 {font-size: 24px;}
+p {font-size: 16px;}
+
+h1, h2, h3 {
+    margin: 0px;
+}
+
+button {
+    border-radius: 10px;
+    border-width: 0;
+    font-weight: 900;
+    color: white;
+    width: 130px;
+    height: 45px;
+    align-items: center;
+    background-color: #001F3F;
+}
+button p {
+    margin: 0;
+}
+button:hover {
+    background-color: #158EB5;
+    border-width: 0;
+}
+button:active {
+    background-color: #1A588B;
+    border-width: 0;
+}
