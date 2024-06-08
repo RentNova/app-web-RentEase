@@ -1,0 +1,101 @@
+.property-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.property-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.property-info {
+    padding: 15px;
+}
+
+.property-info h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.property-info p {
+    margin: 5px 0;
+}
+
+.status-label {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.status-label.Ocupado {
+    background-color: red;
+}
+
+.status-label.Disponible {
+    background-color: green;
+}
+
+.status-label[data-status='En Revisión'] {
+    background-color: orange;
+}
+
+.status-label {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.ratings i {
+    color: gold;
+}
+
+.property-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.property-details p {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.property-details i {
+    margin-right: 5px;
+}
+
+.property-card a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-top: 1px solid #ddd;
+    border-radius: 0 0 5px 5px;
+}
+
+.property-card a:hover {
+    background-color: #0056b3;
+}

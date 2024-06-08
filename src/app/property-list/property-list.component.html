@@ -1,0 +1,10 @@
+<div class="property-list">
+  <div *ngFor="let property of properties" class="property-card">
+    <img [src]="property.image" alt="{{property.name}}">
+    <h2>{{property.name}}</h2>
+    <p>{{property.address}}</p>
+    <p>Estado: {{property.status}}</p>
+    <p>Habitaciones: {{property.bedrooms}}, Baños: {{property.bathrooms}}</p>
+    <a [routerLink]="['/property', property.id]">Ver Detalles</a>
+  </div>
+</div>
