@@ -39,4 +39,21 @@ export class UserService {
         catchError(this.handleError)
       );
   }
+
+  recoverPassword(email: string): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.post<any>(`${this.apiUrl}/recover-password`, { email }, { headers: headers })
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+
+  login(email: string, password: string): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.post<any>(`${this.apiUrl}/login`, { email, password }, { headers: headers })
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+
 }

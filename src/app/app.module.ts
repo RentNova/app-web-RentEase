@@ -12,16 +12,21 @@ import { PropertyListComponent } from './property-list/property-list.component';
 import { PropertyDetailComponent } from './property-detail/property-detail.component';
 import { PropertyService } from './property.service';
 
-import { AppRoutingModule } from './app-routing.module'; 
+import { AppRoutingModule } from './app-routing.module';
+import { RecuperarContrasenaComponent } from './recuperar-contrasena/recuperar-contrasena.component';
+import { LoginComponent } from './login/login.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
     RegisterComponent,
     PerfilComponent,
     PropertyListComponent,
-    PropertyDetailComponent
+    PropertyDetailComponent,
+    RecuperarContrasenaComponent,
   ],
+
   imports: [
     BrowserModule,
     FormsModule,
