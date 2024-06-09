@@ -1,0 +1,23 @@
+<div *ngIf="property" class="property-detail">
+  <h1>{{ property.name }}</h1>
+  <img [src]="property.image" alt="{{ property.name }}">
+  <div class="property-info">
+    <p><strong>Dirección:</strong> {{ property.address }}</p>
+    <p><strong>Estado:</strong> {{ property.status }}</p>
+    <p><strong>Habitaciones:</strong> {{ property.bedrooms }}</p>
+    <p><strong>Baños:</strong> {{ property.bathrooms }}</p>
+    <p><strong>Tamaño:</strong> {{ property.size }} m²</p>
+  </div>
+  <h2>Reseñas</h2>
+  <div class="reviews" *ngFor="let review of property.reviews">
+    <p>{{ review.comment }}</p>
+    <p>Rating: {{ review.rating }}</p>
+  </div>
+  <div class="promote">
+    <h2>Promocionar</h2>
+    <button>Listado destacado</button>
+    <button>Anuncio personalizado</button>
+    <button>Recomendación directa</button>
+  </div>
+  <button (click)="save()">Guardar</button>
+</div>

@@ -1,0 +1,35 @@
+<div class="register-container">
+    <div class="image-section">
+      <img src="assets/logo.png" alt="Imagen de registro">
+    </div>
+    <div class="login-container">
+      <h2>Iniciar Sesión</h2>
+      <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" required [(ngModel)]="email" name="email" #emailModel="ngModel">
+          <div *ngIf="emailModel.invalid && (emailModel.dirty || emailModel.touched)" class="error">
+            El email es requerido.
+          </div>
+        </div>
+        <div>
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" required [(ngModel)]="password" name="password" #passwordModel="ngModel">
+          <div *ngIf="passwordModel.invalid && (passwordModel.dirty || passwordModel.touched)" class="error">
+            La contraseña es requerida.
+          </div>
+        </div>
+        <div>
+            
+          <a routerLink="/recuperar-contrasena">¿Olvidaste tu contraseña?</a> <!-- Movido aquí el enlace de recuperar contraseña -->
+        </div>
+        <div>
+          <button type="submit" [disabled]="loginForm.invalid">Iniciar sesión</button>
+        </div>
+        <div *ngIf="errorMessage" class="error">
+          {{ errorMessage }}
+        </div>
+      </form>
+    </div>
+  </div>
+  

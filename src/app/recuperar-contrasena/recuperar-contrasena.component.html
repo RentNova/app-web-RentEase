@@ -1,0 +1,55 @@
+<!-- Paso 1: Ingresar Email -->
+<div class="reset-container" *ngIf="step === 1">
+    <div class="reset-section">
+      <img src="assets/logo.png" alt="RentEase Logo">
+      <h2>Cambiar contraseña</h2>
+      <form (ngSubmit)="sendResetLink()">
+        <div>
+          <label for="email">Ingresa tu Email</label>
+          <input type="email" id="email" required [(ngModel)]="email" name="email">
+        </div>
+        <button type="submit">Enviar código</button>
+        <button type="button" (click)="cancel()">Cancelar</button>
+        <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Paso 2: Ingresar Código -->
+  <div class="reset-container" *ngIf="step === 2">
+    <div class="reset-section">
+      <img src="assets/logo.png" alt="RentEase Logo">
+      <h2>Cambiar contraseña</h2>
+      <form (ngSubmit)="verifyCode()">
+        <div>
+          <label for="code">Ingresa el código</label>
+          <input type="text" id="code" required [(ngModel)]="code" name="code">
+        </div>
+        <button type="submit">Verificar</button>
+        <button type="button" (click)="sendResetLink()">Reenviar código</button>
+        <button type="button" (click)="cancel()">Cancelar</button>
+        <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Paso 3: Ingresar Nueva Contraseña -->
+  <div class="reset-container" *ngIf="step === 3">
+    <div class="reset-section">
+      <img src="assets/logo.png" alt="RentEase Logo">
+      <h2>Cambiar contraseña</h2>
+      <form (ngSubmit)="resetPassword()">
+        <div>
+          <label for="newPassword">Ingresa la nueva contraseña</label>
+          <input type="password" id="newPassword" required [(ngModel)]="newPassword" name="newPassword">
+        </div>
+        <div>
+          <label for="confirmPassword">Verifica tu contraseña</label>
+          <input type="password" id="confirmPassword" required [(ngModel)]="confirmPassword" name="confirmPassword">
+        </div>
+        <button type="submit">Cambiar contraseña</button>
+        <button type="button" (click)="cancel()">Cancelar</button>
+        <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+      </form>
+    </div>
+  </div>
