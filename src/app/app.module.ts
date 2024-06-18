@@ -34,7 +34,7 @@ import { LoginComponent } from './login/login.component';
     RouterModule,
     AppRoutingModule
   ],
-  providers: [PropertyService],
+  providers: [UserService, PropertyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

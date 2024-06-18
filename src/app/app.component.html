@@ -1,21 +1,10 @@
-<div class="container">
-  <div class="navigation">
-    <button (click)="showRegisterForm()">Crear cuenta</button>
-    <button (click)="showProfile()">Perfil</button>
-    <button (click)="showPropertyList()">Propiedades</button>
-    <button (click)="showLoginForm()">Iniciar sesión</button>
+
+  <div class="container">
+    <div class="navigation">
+      <button routerLink="/registro">Crear cuenta</button>
+      <button routerLink="/perfil">Perfil</button>
+      <button routerLink="/properties">Propiedades</button>
+      <button routerLink="/login">Iniciar sesión</button>
+    </div>
+    <router-outlet></router-outlet>
   </div>
-  <div *ngIf="showRegister">
-    <app-register></app-register>
-  </div>
-  <div *ngIf="showProfileComponent">
-    <app-perfil></app-perfil>
-  </div>
-  <div *ngIf="showPropertyListComponent">
-    <app-property-list></app-property-list>
-  </div>
-  <div *ngIf="showLogin">
-    <app-login></app-login>
-  </div>
- 
-</div>

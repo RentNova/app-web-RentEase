@@ -1,4 +1,3 @@
-// recuperar-contrasena.component.ts
 import { Component } from '@angular/core';
 import { UserService } from '../user.service';
 
@@ -19,25 +18,20 @@ export class RecuperarContrasenaComponent {
   constructor(private userService: UserService) {}
 
   sendResetLink() {
-    this.userService.recoverPassword(this.email).subscribe(
-      response => {
-        this.successMessage = 'Código enviado a tu email.';
-        this.errorMessage = '';
-        this.step = 2;
-      },
-      error => {
-        this.errorMessage = 'Error al enviar el código.';
-        this.successMessage = '';
-      }
-    );
+    // Simulamos el envío del código de verificación sin verificar el email
+    this.successMessage = 'Código enviado a tu email.';
+    this.errorMessage = '';
+    this.step = 2;
   }
 
   verifyCode() {
-    if (this.code === '123456') { // Esta es solo una simulación
+    if (this.code === '00000') { 
       this.step = 3;
       this.errorMessage = '';
+      this.successMessage = 'Código verificado exitosamente.';
     } else {
       this.errorMessage = 'Código incorrecto.';
+      this.successMessage = '';
     }
   }
 
@@ -46,7 +40,8 @@ export class RecuperarContrasenaComponent {
       this.errorMessage = 'Las contraseñas no coinciden.';
       return;
     }
-    // Aquí deberías llamar a una API que cambie la contraseña
+    
+    // Aquí podrías llamar a un servicio para realmente cambiar la contraseña
     this.successMessage = 'Contraseña cambiada exitosamente.';
     this.errorMessage = '';
     this.step = 1; // Reiniciar el flujo
