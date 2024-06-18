@@ -8,9 +8,9 @@ import { PropertyDetailComponent } from './property-detail/property-detail.compo
 const routes: Routes = [
   { path: 'registro', component: RegisterComponent },
   { path: 'perfil', component: PerfilComponent },
-  { path: '', redirectTo: '/registro', pathMatch: 'full' },
-  { path: 'property/:id', component: PropertyDetailComponent }, 
+  { path: '', redirectTo: '/properties', pathMatch: 'full' },
   { path: 'properties', component: PropertyListComponent },
+  { path: 'property/:id', component: PropertyDetailComponent }
 ];
 
 @NgModule({

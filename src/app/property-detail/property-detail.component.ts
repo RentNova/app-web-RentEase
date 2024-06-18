@@ -10,7 +10,6 @@ import { Property } from '../property.model';
 })
 export class PropertyDetailComponent implements OnInit {
   property: Property | undefined;
-  pageTitle: string = 'Mis Propiedades';
 
   constructor(private route: ActivatedRoute, private propertyService: PropertyService) {}
 

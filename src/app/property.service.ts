@@ -1,5 +1,7 @@
+// property.service.ts
+
 import { Injectable } from '@angular/core';
-import { Property } from './property.model';
+import { Property, Review } from './property.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,12 +18,12 @@ export class PropertyService {
       size: 450,
       image: 'assets/property1.jpg',
       reviews: [
-        { rating: 5, comment: 'exelente lugar!' }
+        { rating: 5, comment: 'Excelente lugar!', image: 'assets/reviewer1.jpg', reviewerImage: 'assets/user1.jpeg' }
       ]
     },
     {
       id: 2,
-      name: 'casa neura espaciosa',
+      name: 'Casa neura espaciosa',
       address: 'jr. 432 la molina',
       status: 'Disponible',
       bedrooms: 3,
@@ -29,7 +31,7 @@ export class PropertyService {
       size: 450,
       image: 'assets/property2.jpg',
       reviews: [
-        { rating: 4, comment: 'jardin hermoso!' }
+        { rating: 4, comment: 'Jardín hermoso!', image: 'assets/reviewer2.jpg', reviewerImage: 'assets/user2.jpg' }
       ]
     },
     {
@@ -42,7 +44,7 @@ export class PropertyService {
       size: 400,
       image: 'assets/property3.jpg',
       reviews: [
-        { rating: 3, comment: 'nesecita mejoras.' }
+        { rating: 3, comment: 'Necesita mejoras.', image: 'assets/reviewer3.jpg', reviewerImage: 'assets/user3.jpg' }
       ]
     }
   ];

@@ -1,53 +1,185 @@
-property-detail {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-  }
-  
-  .property-detail img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .property-info {
-    margin-top: 20px;
-  }
-  
-  .property-info p {
-    font-size: 16px;
-    margin: 5px 0;
-  }
-  
-  .reviews {
-    margin-top: 20px;
-  }
-  
-  .reviews div {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-  }
-  
-  .promote {
-    margin-top: 20px;
-  }
-  
-  .promote button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  .promote button:hover {
-    background-color: #0056b3;
-  }
+.property-detail {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.left-column, .right-column {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.left-column {
+  flex: 3;
+}
+
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.property-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.property-header h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #007bff;
+  display: flex;
+  align-items: center;
+}
+
+.property-header .stars {
+  margin-left: 10px;
+  color: gold;
+}
+
+.property-main {
+  display: flex;
+  align-items: flex-start;
+}
+
+.property-header img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.property-info {
+  margin-top: 20px;
+}
+
+.property-info h2, .property-description h2, .reviews h2, .promote h2 {
+  font-size: 20px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.property-info p, .property-description p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.property-info p strong {
+  color: #007bff;
+}
+
+.property-description {
+  margin-top: 20px;
+}
+
+.reviews {
+  margin-top: 40px;
+}
+
+.review {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.review .reviewer-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.review .stars {
+  color: gold;
+  margin-right: 10px;
+}
+
+.load-more {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.load-more:hover {
+  background-color: #0056b3;
+}
+
+.property-status {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.status {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+}
+
+.status.disponible {
+  background-color: #001F3F;
+  color: green;
+}
+
+.status.ocupado {
+  background-color: #001F3F;
+  color: red;
+}
+
+.promote {
+  width: 100%;
+  background-color: #d7e8ff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.promote button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #001F3F;
+  color: #fff;
+  cursor: pointer;
+}
+
+.promote button:hover {
+  background-color: #0056b3;
+}
+
+button.save {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button.save:hover {
+  background-color: #0056b3;
+}
+
+.label {
+  color: #007bff;
+}
