@@ -20,14 +20,7 @@
     </div>
     <div class="reviews">
       <h2>Reseñas</h2>
-      <div *ngFor="let review of property.reviews" class="review">
-        <img [src]="review.reviewerImage" alt="Reviewer" class="reviewer-img">
-        <div class="review-text">
-          <p class="stars">⭐⭐⭐⭐⭐</p>
-          <p>{{ review.comment }}</p>
-        </div>
-      </div>
-      <button class="load-more">Cargar más reseñas</button>
+      <app-review [propertyId]="property.id"></app-review>
     </div>
   </div>
   <div class="right-column">

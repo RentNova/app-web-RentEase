@@ -1,0 +1,18 @@
+<div class="owner-reviews">
+    <h2>Reseñas de mis Propiedades</h2>
+    <div *ngFor="let review of reviews" class="review-card">
+      <img [src]="review.reviewerImage" alt="Reviewer" class="reviewer-img">
+      <div>
+        <p><strong>{{ review.reviewer }}</strong></p>
+        <p class="stars">{{ '⭐'.repeat(review.rating) }}</p>
+        <p>{{ review.comment }}</p>
+      </div>
+    </div>
+    <h2>Calificaciones Generales</h2>
+    <div *ngFor="let experience of experiences" class="experience-card">
+      <p>Comunicación con el propietario: {{ experience.communication }} ⭐</p>
+      <p>Calidad de la propiedad: {{ experience.propertyQuality }} ⭐</p>
+      <p>Otros aspectos: {{ experience.otherAspects }}</p>
+    </div>
+  </div>
+  

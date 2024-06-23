@@ -59,7 +59,7 @@
   margin-top: 20px;
 }
 
-.property-info h2, .property-description h2, .reviews h2, .promote h2 {
+.property-info h2, .property-description h2, .reviews h2, .promote h2, .property-info p strong {
   font-size: 20px;
   color: #007bff;
   margin-bottom: 10px;
@@ -68,10 +68,6 @@
 .property-info p, .property-description p {
   font-size: 16px;
   margin: 5px 0;
-}
-
-.property-info p strong {
-  color: #007bff;
 }
 
 .property-description {
@@ -84,18 +80,15 @@
 
 .review {
   display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 8px;
+  align-items: flex-start;
+  margin-bottom: 20px;
 }
 
 .review .reviewer-img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .review .stars {
@@ -103,9 +96,21 @@
   margin-right: 10px;
 }
 
-.load-more {
+.add-review {
+  margin-top: 20px;
+}
+
+.add-review input, .add-review textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.add-review button {
   display: block;
-  margin: 20px auto;
+  margin-top: 10px;
   padding: 10px 20px;
   border: none;
   border-radius: 8px;
@@ -114,7 +119,7 @@
   cursor: pointer;
 }
 
-.load-more:hover {
+.add-review button:hover {
   background-color: #0056b3;
 }
 
@@ -163,7 +168,7 @@
 }
 
 .promote button:hover {
-  background-color: #0056b3;
+  background-color: #3485dc;
 }
 
 button.save {
@@ -177,7 +182,7 @@ button.save {
 }
 
 button.save:hover {
-  background-color: #0056b3;
+  background-color: #007bff;
 }
 
 .label {
