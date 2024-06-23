@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="navigation">
+      <button (click)="showRegisterForm()">Crear cuenta</button>
+      <button (click)="showProfile()">Perfil</button>
+    </div>
+    <div *ngIf="showRegister">
+      <app-register></app-register>
+    </div>
+    <div *ngIf="showProfileComponent">
+      <app-perfil></app-perfil>
+    </div>
+  </div>
+  
