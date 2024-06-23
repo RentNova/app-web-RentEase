@@ -1,0 +1,45 @@
+<div *ngIf="property" class="property-detail">
+  <div class="left-column">
+    <div class="property-header">
+      <h1>{{ property.name }} <span class="stars">⭐⭐⭐⭐⭐</span></h1>
+      <div class="property-main">
+        <img [src]="property.image" alt="{{ property.name }}">
+        <div class="property-info">
+          <h2>Características</h2>
+          <p><strong>Tipo de propiedad:</strong> Departamento</p>
+          <p><strong>Habitaciones:</strong> {{ property.bedrooms }}</p>
+          <p><strong>Baños:</strong> {{ property.bathrooms }}</p>
+          <p><strong>Tamaño:</strong> {{ property.size }} m²</p>
+          <p><strong>Ubicación:</strong> {{ property.address }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="property-description">
+      <h2>Descripción</h2>
+      <p>Espacioso departamento con 3 habitaciones y 2 baños. Ambientes luminosos y modernos, ideal para familias.</p>
+    </div>
+    <div class="reviews">
+      <h2>Reseñas</h2>
+      <div *ngFor="let review of property.reviews" class="review">
+        <img [src]="review.reviewerImage" alt="Reviewer" class="reviewer-img">
+        <div class="review-text">
+          <p class="stars">⭐⭐⭐⭐⭐</p>
+          <p>{{ review.comment }}</p>
+        </div>
+      </div>
+      <button class="load-more">Cargar más reseñas</button>
+    </div>
+  </div>
+  <div class="right-column">
+    <div class="property-status">
+      <p class="status {{ property.status | lowercase }}">{{ property.status }}</p>
+    </div>
+    <div class="promote">
+      <h2>Promocionar</h2>
+      <button>Listado destacado</button>
+      <button>Anuncio personalizado</button>
+      <button>Recomendación directa</button>
+    </div>
+  </div>
+  <button (click)="save()" class="save">Guardar</button>
+</div>

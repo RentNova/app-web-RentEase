@@ -1,0 +1,65 @@
+<div class="register-container">
+  <div class="image-section">
+    <img src="assets/logo.png" alt="Imagen de registro">
+  </div>
+  <div class="form-section">
+    <h2>Registro</h2>
+    <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required [(ngModel)]="user.nombre" name="nombre" #nombre="ngModel">
+        <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="error">
+          El nombre es requerido.
+        </div>
+      </div>
+      <div>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" required [(ngModel)]="user.apellido" name="apellido" #apellido="ngModel">
+        <div *ngIf="apellido.invalid && (apellido.dirty || apellido.touched)" class="error">
+          El apellido es requerido.
+        </div>
+      </div>
+      <div>
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" required [(ngModel)]="user.edad" name="edad" #edad="ngModel">
+        <div *ngIf="edad.invalid && (edad.dirty || edad.touched)" class="error">
+          La edad es requerida.
+        </div>
+      </div>
+      <div>
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" required [(ngModel)]="user.telefono" name="telefono" #telefono="ngModel">
+        <div *ngIf="telefono.invalid && (telefono.dirty || telefono.touched)" class="error">
+          El teléfono es requerido.
+        </div>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required [(ngModel)]="user.email" name="email" #email="ngModel">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+          El email es requerido.
+        </div>
+      </div>
+      <div>
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" required [(ngModel)]="user.contrasena" name="contrasena" #contrasena="ngModel">
+        <div *ngIf="contrasena.invalid && (contrasena.dirty || contrasena.touched)" class="error">
+          La contraseña es requerida.
+        </div>
+      </div>
+      <div>
+        <label for="confirmarContrasena">Verifica tu contraseña:</label>
+        <input type="password" id="confirmarContrasena" required [(ngModel)]="user.confirmarContrasena" name="confirmarContrasena" #confirmarContrasena="ngModel">
+        <div *ngIf="confirmarContrasena.invalid && (confirmarContrasena.dirty || confirmarContrasena.touched)" class="error">
+          La confirmación de la contraseña es requerida.
+        </div>
+      </div>
+      <div>
+        <button type="submit" [disabled]="registerForm.invalid">Crear cuenta</button>
+      </div>
+      <div *ngIf="errorMessage" class="error">
+        {{ errorMessage }}
+      </div>
+    </form>
+  </div>
+</div>
