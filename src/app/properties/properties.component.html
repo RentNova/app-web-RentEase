@@ -1,0 +1,15 @@
+<div class="properties-container">
+    <button (click)="openAddPropertyDialog()">Agregar propiedad</button>
+    <div *ngFor="let property of properties" class="property-card">
+      <h2>{{ property.name }}</h2>
+      <p>{{ property.address }}</p>
+      <p>Status: {{ property.status }}</p>
+      <p>Rating: {{ property.rating }}</p>
+      <p>Bedrooms: {{ property.bedrooms }}</p>
+      <p>Bathrooms: {{ property.bathrooms }}</p>
+      <p>Size: {{ property.size }} sq ft</p>
+      <button (click)="updateProperty(property.id, 'Ocupado')">Ocupar</button>
+      <button (click)="deleteProperty(property.id)">Eliminar</button>
+    </div>
+  </div>
+  

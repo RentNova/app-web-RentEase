@@ -54,3 +54,5 @@ button:active {
     background-color: #1A588B;
     border-width: 0;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
