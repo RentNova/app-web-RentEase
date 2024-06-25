@@ -1,0 +1,21 @@
+
+<div class="container">
+    <div class="headbar">
+        <img (click)="goBack()" src="assets/return.png"/>
+        <div class="profile">
+            <img [src]="imageUrl" onerror="this.src='assets/user.png'"/>
+            <h2>{{userDetails?.firstName + " " + userDetails?.lastName}}</h2>
+            <h1>Perfil</h1>
+        </div>
+    </div>
+    <div class="profileButtons">
+        <button [routerLink]="['/properties/own']" id="btn-propiedades">Propiedades</button>
+        <button [routerLink]="['/account/perfil-edit']" id="btn-edit">Editar Perfil</button>        
+    </div>
+    <div class="options">
+        <h2>Alquileres Activos</h2>
+        <h2>Historial De Alquileres Y Pagos</h2>
+        <h2>Metodo De Pago</h2>
+    </div>
+</div>
+

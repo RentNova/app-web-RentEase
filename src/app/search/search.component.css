@@ -1,0 +1,100 @@
+.buttons{
+    position: relative;
+    display: block;
+    padding: 12px 0;
+    width: 100%;
+    text-align: center;
+}
+.container{
+    padding: 121px 0 0 0;
+    width: 100%;
+    height: 100%;
+}
+#btn-add{
+    clear: left;
+    position: relative;
+    float: left;
+    width: 200px;
+    margin-left: 32px;
+    font-size: 16px;
+}
+#btn-report {    
+    position: relative;
+    float: right;
+    width: 200px;
+    margin-right: 32px;
+    font-size: 16px;
+}
+
+.property-item{
+    margin: 20px auto;
+    max-width: 400px;
+}
+.properties{
+    clear:both;
+    display: flex;
+    flex-wrap: wrap;
+}
+.properties .image img{
+    height: 300px;
+    width: 400px;
+    border-radius: 16px;
+}
+.properties .topside {
+    position: relative;
+    margin-top: 10px;
+}
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+}
+.middleside img {
+    float: left;
+}
+.properties .name {
+    float: left;
+}
+.properties .state {
+    float: right;
+    font-weight: 400;
+}
+.properties .middleside{
+    clear:both;
+}
+.middleside p {
+    float:left
+}
+
+.stars-container {
+    float:right;
+    display: flex;
+}
+.line {
+    clear: both;
+}
+.line hr {
+    background-color: #E9E9E9;
+    border: none;
+    height: 2px;
+}
+.stars-container img {
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+}
+.botside{
+    clear:both;
+    display: flex;
+    width: 200px;
+    align-items: center;
+}
+.botside hr{
+    background-color: #E9E9E9;
+    border: none;
+    height: 24px;
+    width: 2px;
+}
+.botside p {
+    margin: 0;
+}

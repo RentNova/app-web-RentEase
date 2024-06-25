@@ -1,0 +1,77 @@
+<div *ngIf="propiedad" class="propiedad">
+    <div class="leftside">
+        
+        <div class="title">        
+            <h2>{{ propiedad.name }}</h2>
+            <div  class="stars-container">
+                <img *ngFor="let star of getPropertyStars(propiedad.rating)" [src]="star.image" [alt]="star.alt">
+            </div>
+        </div>
+        <div class="content">
+            <div class="image">
+                <img [src]="propiedad.img" onerror="this.src='assets/user.png'"/>
+                <p class="subtitle">Descripción</p>
+                <p> {{ propiedad.description }} </p>
+            </div>
+            <div class="desc">
+                <p class="subtitle">Tipo de propiedad</p>
+                <p> {{ propiedad.type }} </p>
+                <p class="subtitle">Habitaciones</p>
+                <p>{{ propiedad.rooms }}</p>
+                <p class="subtitle">Baños</p>
+                <p>{{ propiedad.bathrooms }}</p>
+                <p class="subtitle">Tamaño</p>
+                <p>{{ propiedad.size }}</p>
+                <p class="subtitle">Ubicacción</p>
+                <p>{{ propiedad.ubication }}</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="rightside">
+        @if (shouldShow()){
+            
+        <div class="occupied" *ngIf="client">
+            <h2 class="state" [style.color]="getStatusColor(propiedad.state)">{{ propiedad.state }}</h2>
+            <div class="userimage">
+                <img [src]="client.img" onerror="this.src='assets/user.png'"/>
+            </div>
+            <h2 class="username text-centered color-white">{{client.firstName}} {{client.lastName}}</h2>
+            <div class="cuantity text-centered color-white">
+                <p class="subtitle">Nº personas</p>
+                <p>{{clientdata.cuantity}}</p>
+            </div>
+            <div class="date text-centered color-white">
+                <div class="contract-date">
+                    <p class="subtitle">Inicio del contrato</p>
+                    <p>{{clientdata.contractStart}}</p>
+                </div>
+                <div class="contract-date">
+                    <p class="subtitle">Término del contrato</p>
+                    <p>{{clientdata.contractEnd}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="not-occupied" *ngIf="!client">
+            <h2 class="state text-centered" [style.color]="getStatusColor(propiedad.state)">{{ propiedad.state }}</h2>
+        </div>
+        <div class="promotion text-centered color-white" *ngIf="!client">
+            <h2 class="promo">Promocionar</h2>
+            <button>Listado destacado</button>
+            <button>Anuncio personalizado</button>
+            <button>Recomendaciones directas</button>
+        </div>
+        }
+    </div>
+
+    
+</div>
+<div class="reviews">
+    <div class="reviews-title">
+        <h2>Reseñas</h2>
+        @if (!shouldShow()){
+        <button (click)="openChangeReviewDialog()">Review</button>
+        }
+    </div>
+    <app-review-list *ngIf="propiedad" [propertyid]="propiedad.id" />
+</div>

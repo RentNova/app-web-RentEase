@@ -32,6 +32,10 @@ p {font-size: 16px;}
 h1, h2, h3 {
     margin: 0px;
 }
+label {
+    display: block;
+    margin: 16px 0;
+}
 
 button {
     border-radius: 10px;
@@ -43,9 +47,11 @@ button {
     align-items: center;
     background-color: #001F3F;
 }
+
 button p {
     margin: 0;
 }
+
 button:hover {
     background-color: #158EB5;
     border-width: 0;
@@ -53,4 +59,37 @@ button:hover {
 button:active {
     background-color: #1A588B;
     border-width: 0;
+}
+
+.mat-mdc-form-field-infix, .mat-mdc-text-field-wrapper, .mdc-text-field, .mdc-text-field--filled, .mdc-text-field--no-label{
+    padding: 0px 0px !important;
+    background-color: white;
+}
+.mdc-line-ripple{
+    display: none;
+}
+.mat-button-toggle-checked .mat-button-toggle-label-content{
+    color: #fff !important;
+}
+mat-pseudo-checkbox {
+    display: none !important;
+}
+mat-button-toggle-group{
+    border: none !important;
+}
+mat-button-toggle {
+    --mat-standard-button-toggle-selected-state-background-color: #2389FC;
+    --mat-stepper-header-selected-state-label-text-color: black;
+    color: #808080 !important;    
+}
+.toggleButton button:hover {
+    border-radius: 30px;
+    color: white;    
+}
+.toggleButton {
+    background-color: white; 
+    border-radius: 30px;
+}
+.mat-mdc-dialog-surface, .mdc-dialog__surface {
+    border-radius: 40px !important;
 }

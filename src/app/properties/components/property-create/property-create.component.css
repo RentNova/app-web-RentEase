@@ -1,0 +1,99 @@
+h1 {font-size: 64px;}
+h2 {font-size: 32px;}
+h3 {font-size: 24px;}
+p, label{font-size: 16px;}
+p, label{
+    font-weight: 400;
+    color: #2389FC;
+}
+.form {
+    max-width: 600px;
+    margin: 0 10px 0 auto;
+}
+input {
+    height: 50px !important;
+    border-radius: 25px;
+    border-width: 0;
+    background-color: #E0E0E0;
+    font-size: 16px;
+    padding: 20px;
+    width: 100%;
+}
+.userData{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 2;
+    width: 100%;
+}
+.userData div {
+    flex:1 1 220px;
+    margin: 15px 0.5%;    
+}
+.userData label {
+    width: fit-content;
+    margin-right: 10px;
+}
+.userData input{    
+    width: 100%;
+    margin: auto;
+}
+.button-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px 0;
+}
+button{
+    text-align: center;
+}
+.example-full-width {
+    width: 100%;
+}
+
+.content {
+    clear: both;
+    display: flex;
+}
+
+.form{
+    order: 1;
+}
+.photo{
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    align-items: center;
+    margin: 0 auto 0 10px ;
+}
+.photo p {
+    width: 100%;
+    margin: 16px;
+}
+.photo img {
+    background-color: #d9d9d9;
+    width: 250px;
+    height: 250px;
+    border-radius: 23px;
+    margin-bottom: 20px;
+    border-style: none;
+}
+form {
+    padding: 0 10px;
+}
+@media (max-width: 900px) {
+    .content {
+        clear: both;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form{
+        order: 2;
+        margin: 0 auto;
+    }
+    .photo{
+        order: 1;
+        margin: 0 auto;
+    }
+}

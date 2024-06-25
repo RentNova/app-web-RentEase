@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="headbar">
+        <img (click)="goBack()" src="assets/return.png"/>
+        <div class="profile">
+            <h2>Contáctanos</h2>
+        </div>
+    </div>
+    <div class="content">
+        <h1>¿Necesitas Contactarnos?</h1>
+    </div>
+    <div class="contact">
+        <div class="left">
+            <div class="item">
+                <div class="image">
+                    <img src="assets/chat.png" alt="">
+                </div>
+                <div>
+                    <h2>Envianos un Mensaje</h2>
+                    <p>Ponte en contacto con nuestros agentes y te responderemos lo antes posible</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="image">
+                    <img src="assets/tel.png" alt="">
+                </div>
+                <div>
+                    <h2>Llámanos</h2>
+                    <p>XXX-XXX-XX</p>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <button>Enviar</button>
+        </div>
+    </div>
+    <div class="FAQ">
+        <h2>Preguntas frecuentes</h2>
+        <div class="questions">
+            <div *ngFor="let question of faqData; let i = index" class="question">
+                <button class="question-toggle" (click)="toggleQuestion(i)">
+                    {{ question.title }}
+                </button>
+                <div class="answer" *ngIf="question.active">
+                    {{ question.content }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

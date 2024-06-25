@@ -1,0 +1,23 @@
+#auth-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.section{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+}
+.logo {
+    background-color: #001F3F;
+}
+.logo img{
+    width: 80%;
+    margin: auto;
+    display: block;
+}
+.content {
+    width: 100%;
+    padding: 0 8%;
+}

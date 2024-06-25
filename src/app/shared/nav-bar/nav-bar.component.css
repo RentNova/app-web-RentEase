@@ -1,0 +1,82 @@
+#header-nav {
+    position: fixed;
+    display: flex;
+    background-color: #001F3F;
+    width: calc(100% - 40px);
+    margin: 13px 20px;
+    padding: 8px 16px;
+    height: 82.75px;
+    border-radius: 80px;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 1000;
+}
+#header-nav a {
+    padding: 5px 0px;
+}
+#navbarNavDropdown{
+    margin: 0px 34px;
+}
+#navbarNavDropdown a {
+    text-decoration: none;
+    color: #2389FC;
+    font-size: 16px;
+    padding: 8px 0px;
+    text-align: center;
+    line-height: 0;
+}
+#navbarNavDropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#navbarNavDropdown li {
+    padding: 0px 10px;
+    display: inline;
+}
+
+#Inicio{
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+#Inicio img{
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: 10px;
+    cursor: pointer; 
+}
+#Inicio img:hover {
+    transform: scale(1.1);    
+}
+#Inicio img:active {
+    transform: scale(0.9);
+}
+#login-btn {
+    border-radius: 10px;
+    border-width: 0;
+    font-weight: 900;
+    color: white;
+    width: 130px;
+    height: 45px;
+    align-items: center;
+    background-color: #2389FC;
+    margin-right: 10px;
+}
+
+
+#login-btn p {
+    margin: 0;
+}
+
+#login-btn:hover {
+    background-color: #158EB5;
+    border-width: 0;
+}
+#login-btn:active {
+    background-color: #1A588B;
+    border-width: 0;
+}

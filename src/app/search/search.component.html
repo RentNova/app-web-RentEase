@@ -1,0 +1,32 @@
+<div class="container">
+<div class="properties">
+    <div *ngFor="let propiedad of properties" class="property-item" (click)="goToPropertyDetail(propiedad)">
+        <div class="image">
+            <img [src]="propiedad.img" onerror="this.src='assets/user.png'"/>
+        </div>
+        <div class="topside">
+            <p class="name">{{propiedad.name}}</p>
+        </div>
+        <div class="middleside">
+            <img src="assets/location.png" class="icon">
+            <p>{{propiedad.ubication}}</p>
+            <div  class="stars-container">
+                <img *ngFor="let star of getPropertyStars(propiedad.rating)" [src]="star.image" [alt]="star.alt">
+            </div>
+        </div>
+        <div class="line">
+            <hr/>
+        </div>
+        <div class="botside">
+            <img src="assets/bed.png" class="icon">
+            <p>{{propiedad.rooms}}</p>
+            <hr/>
+            <img src="assets/bathroom.png" class="icon">
+            <p>{{propiedad.bathrooms}}</p>
+            <hr/>
+            <img src="assets/size.png" class="icon">
+            <p>{{propiedad.size}}</p>
+        </div>
+    </div>
+</div>
+</div>

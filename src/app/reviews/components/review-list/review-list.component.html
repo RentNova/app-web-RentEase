@@ -1,0 +1,17 @@
+
+<div class="review-list">
+    <div *ngFor="let review of userReviews" class="review-item">
+        <div class="profile">            
+            <img [src]="review.user.img" onerror="this.src='assets/user.png'"/>
+            <p>{{review.user.firstName}} {{review.user.lastName}}</p>
+        </div>
+        <div class="content">
+            <div class="stars-container">
+                <img *ngFor="let star of getStars(review.review.rating)" [src]="star.image" [alt]="star.alt">
+            </div>
+            <div class="text">
+                <p>{{review.review.content}}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+<div class="back">
+    <img [routerLink]="['/account/auth/login']" src="assets/return2.png"/>
+    <h1>Registro</h1>
+</div>
+<h2>Ingresa tus datos</h2>
+<form [formGroup]="form" (ngSubmit)="submitRegister()">
+
+    <div class="userData">
+        <div>
+            <label for="firstName">Nombre</label>
+            <mat-form-field class="example-full-width">
+                <input formControlName="firstName" matInput [formControl]="$any(form.controls['firstName'])" [errorStateMatcher]="matcher"
+                       placeholder="Nombre">
+                @if (form.controls['firstName'].hasError('required')) {
+                  <mat-error>Campo <strong>Obligatorio</strong></mat-error>
+                }
+            </mat-form-field>
+        </div>
+        <div>
+            <label for="lastName">Apellido</label>
+            <mat-form-field class="example-full-width">
+                <input formControlName="lastName" matInput [formControl]="$any(form.controls['lastName'])" [errorStateMatcher]="matcher"
+                       placeholder="Apellido">
+                @if (form.controls['lastName'].hasError('required')) {
+                  <mat-error>Campo <strong>Obligatorio</strong></mat-error>
+                }
+            </mat-form-field>
+        </div>
+        <div>
+            <label for="age">Edad</label>
+            <mat-form-field class="example-full-width">
+                <input type="tel" formControlName="age" matInput [formControl]="$any(form.controls['age'])" [errorStateMatcher]="matcher"
+                       placeholder="Edad">
+                @if (form.controls['age'].hasError('required')) {
+                  <mat-error>Campo <strong>Obligatorio</strong></mat-error>
+                }
+            </mat-form-field>
+        </div>
+        <div>
+            <label for="cellphone">Teléfono</label>
+            <mat-form-field class="example-full-width">
+                <input formControlName="cellphone" type="tel" matInput [formControl]="$any(form.controls['cellphone'])" [errorStateMatcher]="matcher"
+                       placeholder="Teléfono">
+                @if (form.controls['cellphone'].hasError('required')) {
+                  <mat-error>Campo <strong>Obligatorio</strong></mat-error>
+                }
+                @if (form.controls['cellphone'].hasError('pattern')) {
+                    <mat-error>Teléfono <strong>inválido</strong></mat-error>
+                }
+            </mat-form-field>            
+        </div>
+    </div>
+
+
+    <label for="email">Email</label>
+    <mat-form-field class="example-full-width">
+        <input formControlName="email" type="email" matInput [formControl]="$any(form.controls['email'])" [errorStateMatcher]="matcher"
+                placeholder="Ex. pat@example.com">
+        @if (form.controls['email'].hasError('email') && !form.controls['email'].hasError('required')) {
+            <mat-error>Ingrese un correo válido</mat-error>
+        }
+        @if (form.controls['email'].hasError('required')) {
+            <mat-error>Campo <strong>Obligatorio</strong></mat-error>
+        }
+    </mat-form-field>
+    <label for="password">Contraseña</label>
+    <mat-form-field class="example-full-width">
+        <input formControlName="password" type="password" matInput [formControl]="$any(form.controls['password'])" [errorStateMatcher]="matcher"
+             placeholder="Contraseña">
+        @if (form.controls['password'].hasError('required')) {
+            <mat-error>Campo <strong>Obligatorio</strong></mat-error>
+      }
+    </mat-form-field>    
+    <label for="passwordconfirm">Verifica tu contraseña</label>
+    <mat-form-field class="example-full-width">
+        <input formControlName="passwordconfirm" type="password" matInput [formControl]="$any(form.controls['passwordconfirm'])" [errorStateMatcher]="matcher"
+             placeholder="Repite tu contraseña">
+             @if (form.errors?.['PasswordNoMatch']) {
+             <mat-error>Las contraseñas <strong>no coinciden</strong></mat-error>
+             }
+             @if (form.controls['passwordconfirm'].hasError('required')) {
+                 <mat-error>Campo <strong>Obligatorio</strong></mat-error>
+                 }
+    </mat-form-field>
+    <div class="button-container">
+        <button type="submit">Crear cuenta</button>
+    </div>
+</form>

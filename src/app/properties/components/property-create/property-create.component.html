@@ -1,0 +1,87 @@
+<div class="content">
+    <div class="photo">
+        <p>Foto</p>
+        <img id="propertyimage" [src]="imageUrl" onerror="this.src='assets/photo.png'"/>      
+        <button (click)="openChangePhotoDialog()">Agregar foto</button>  
+    </div>
+    <div class="form">
+        <form [formGroup]="form" (ngSubmit)="submitRegister()">
+                <label for="name">Nombre</label>
+                <mat-form-field class="example-full-width">
+                    <input id="name" formControlName="name" matInput [formControl]="$any(form.controls['name'])" [errorStateMatcher]="matcher"
+                        placeholder="Nombre">
+                    @if (form.controls['name'].hasError('required')) {
+                    <mat-error>Campo <strong>Obligatorio</strong></mat-error>
+                    
+                    }
+                </mat-form-field>
+            <div class="userData">
+                <div>
+                    <label for="type">Tipo de propiedad</label>
+                    <mat-form-field class="example-full-width">
+                        <input id="type" formControlName="type" matInput [formControl]="$any(form.controls['type'])" [errorStateMatcher]="matcher"
+                            placeholder="Tipo de propiedad">
+                        @if (form.controls['type'].hasError('required')) {
+                        <mat-error>Campo <strong>Obligatorio</strong></mat-error>
+                        }
+                    </mat-form-field>
+                </div>
+                <div>
+                    <label for="size">Tamaño</label>
+                    <mat-form-field class="example-full-width">
+                        <input id="size" type="tel" formControlName="size" matInput [formControl]="$any(form.controls['size'])" [errorStateMatcher]="matcher"
+                            placeholder="Tamaño">
+                        @if (form.controls['size'].hasError('required')) {
+                        <mat-error>Campo <strong>Obligatorio</strong></mat-error>
+                        }
+                    </mat-form-field>
+                </div>
+                <div>
+                    <label for="rooms">Habitaciones</label>
+                    <mat-form-field class="example-full-width">
+                        <input id="rooms" formControlName="rooms" type="tel" matInput [formControl]="$any(form.controls['rooms'])" [errorStateMatcher]="matcher"
+                            placeholder="Habitaciones">
+                        @if (form.controls['rooms'].hasError('required')) {
+                        <mat-error>Campo <strong>Obligatorio</strong></mat-error>
+                        }
+                    </mat-form-field>            
+                </div>
+                <div>
+                    <label for="bathrooms">Baños</label>
+                    <mat-form-field class="example-full-width">
+                        <input id="bathrooms" formControlName="bathrooms" type="tel" matInput [formControl]="$any(form.controls['bathrooms'])" [errorStateMatcher]="matcher"
+                            placeholder="Baños">
+                        @if (form.controls['bathrooms'].hasError('required')) {
+                        <mat-error>Campo <strong>Obligatorio</strong></mat-error>
+                        }
+                        @if (form.controls['bathrooms'].hasError('pattern')) {
+                            <mat-error>Teléfono <strong>inválido</strong></mat-error>
+                        }
+                    </mat-form-field>            
+                </div>
+            </div>
+
+
+            <label for="description">Descripción</label>
+            <mat-form-field class="example-full-width">
+                <input id="description" formControlName="description" type="text" matInput [formControl]="$any(form.controls['description'])" [errorStateMatcher]="matcher"
+                        placeholder="Descripción">
+                @if (form.controls['description'].hasError('required')) {
+                    <mat-error>Campo <strong>Obligatorio</strong></mat-error>
+                }
+            </mat-form-field>
+            <label for="ubication">Ubicación</label>
+            <mat-form-field class="example-full-width">
+                <input id="ubication" formControlName="ubication" type="text" matInput [formControl]="$any(form.controls['ubication'])" [errorStateMatcher]="matcher"
+                    placeholder="Ubicación">
+                @if (form.controls['ubication'].hasError('required')) {
+                    <mat-error>Campo <strong>Obligatorio</strong></mat-error>
+            }
+            </mat-form-field>    
+            
+            <div class="button-container">
+                <button type="submit">Agregar Propiedad</button>
+            </div>
+        </form>
+    </div>
+</div>

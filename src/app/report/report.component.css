@@ -1,0 +1,11 @@
+.container{
+    padding: 200px;
+}
+#chart{
+    padding: 10px;
+    max-width: 600px;
+    margin: auto;
+    background-color: #001F3F;
+    border-radius: 30px;
+    color: white;
+}

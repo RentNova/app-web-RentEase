@@ -1,0 +1,29 @@
+<header *ngIf="shouldShowHeader()">
+    <nav id="header-nav">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/logo.png" width="214px" height="41px">
+        </a>
+        <div id="navbarNavDropdown">
+            <ul>
+                <li>
+                    <a [routerLink]="['/']">Inicio</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/search']">Búsqueda</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/support']">Contáctanos</a>
+                </li>
+            </ul>
+        </div>
+        <div id="Inicio">
+            <img *ngIf="isLogged()"  src="assets/user.png" [routerLink]="['/account/perfil']">
+            <button *ngIf="!isLogged()" [style.margin-left]="isLogged() ? '' : 'auto'" [routerLink]="['/account/auth/login']" id="login-btn">
+                <p>Iniciar sesión</p>
+            </button>
+            <button *ngIf="isLogged()" [routerLink]="['/']" id="login-btn" (click)="closeSession()">
+                <p>Cerrar sesión</p>
+            </button>
+        </div>
+    </nav>    
+</header>

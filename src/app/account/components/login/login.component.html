@@ -1,0 +1,35 @@
+
+<div class="back">
+  <img [routerLink]="['/']" src="assets/return2.png"/>
+</div>
+<h1>Iniciar Sesión</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitLogin()">
+    <label for="email">Email</label>
+    <mat-form-field class="example-full-width">
+      <input id="email" formControlName="email" type="email" matInput [formControl]="formGroup.controls.email" [errorStateMatcher]="matcher"
+             placeholder="Ex. pat@example.com">
+      @if (formGroup.controls.email.hasError('email') && !formGroup.controls.email.hasError('required')) {
+        <mat-error>Ingrese un correo válido</mat-error>
+      }
+      @if (formGroup.controls.email.hasError('required')) {
+        <mat-error>Campo <strong>Obligatorio</strong></mat-error>
+      }
+    </mat-form-field>
+    <label for="password">Contraseña</label>
+    <mat-form-field class="example-full-width">
+        <input type="password" formControlName="password" id="password" matInput [formControl]="formGroup.controls.password" [errorStateMatcher]="matcher"
+               placeholder="Contraseña">
+        @if (formGroup.controls.password.hasError('required')) {
+            <mat-error>Campo <strong>Obligatorio</strong></mat-error>
+        }
+    </mat-form-field>
+    <br/>    
+    <a><p>¿Olvidaste tu contraseña?</p></a>
+    <br/>
+    <div class="buttons">
+        <button type="submit">Iniciar Sesión</button>
+        <p *ngIf="formGroup.errors?.['WrongCredentials']">Credenciales incorrectas</p>
+        <hr/>
+        <button [routerLink]="['/account/auth/register']">Crear nueva cuenta</button>
+    </div>
+</form>

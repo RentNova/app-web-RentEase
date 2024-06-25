@@ -1,0 +1,131 @@
+h1 {font-size: 64px;}
+h2 {font-size: 32px;}
+h3 {font-size: 24px;}
+p, label{font-size: 16px;}
+h1{
+    margin: 20px auto;
+    font-weight: 500;
+    color: black;
+    line-height: 64px;
+}
+h2 {
+    margin: auto;
+    margin-bottom: 10px;
+    line-height: 32px;
+    color: #2389FC;
+}
+.container{
+    padding: 121px 0 0 0;
+    width: 100%;
+    height: 100%;
+}
+div {
+    overflow: auto;
+}
+.headbar{
+    position: relative;
+    width: 100%;
+    height: 92px;
+    background-color: #001F3F;
+}
+.headbar{
+    overflow: visible;
+}
+.headbar > img {
+    position: relative;
+    float: left;
+    top:-10px;
+}
+.headbar > img:hover {
+    transform: scale(1.05);    
+}
+.headbar > img:active {
+    transform: scale(0.95);
+}
+.profile {    
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.profile h2 {
+    text-align: center;
+}
+.image {
+    min-width: 101px;
+    margin-right: 20px;
+}
+
+.image img {
+    float: right;
+}
+.contact{
+    background-color: #2389FC;
+    display: flex;
+    padding: 5% 0;
+}
+.left {
+    margin-left: auto;
+    max-width: 50%;
+}
+.right{
+    margin-right: auto;
+}
+.right button{
+    margin-top: 20px;
+}
+.item {
+    display: flex;
+}
+.item p, .item h2{
+    color: white;
+}
+
+.FAQ {
+    width: 100%;
+    max-width: 600px; /* Ajusta según tus necesidades */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.FAQ h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.questions {
+    border-top: 1px solid #ccc;
+}
+
+.question {
+    border-bottom: 1px solid #ccc;
+}
+.question button{
+    color: black;
+    font-weight: 100;
+}
+.question-toggle {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+}
+
+.answer {
+    display: none;
+    padding: 10px 20px;
+}
+
+.question.active .answer {
+    display: block;
+}

@@ -1,0 +1,138 @@
+h1 {font-size: 64px;}
+h2 {font-size: 32px;}
+h3 {font-size: 24px;}
+p, label{font-size: 16px;}
+h1{
+    margin: auto;
+    margin-bottom: 40px;
+    line-height: 64px;
+}
+.subtitle {
+    color: #2389FC;
+}
+.propiedad {
+    clear: both;
+    display: flex;
+    height: fit-content;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.leftside {
+    width: 60%;
+    padding: 0 0 0 2%;
+}
+
+.rightside {
+    max-width: 40%;
+    height: fit-content;
+    margin-right: 5%;
+}
+.leftside img{
+    width: 100%;
+    border-radius: 18px;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+.leftside .image{
+    width: 60%;
+}
+.leftside .desc {
+    width: 40%;
+    height: 300px;
+    margin: 0 0 0 2%
+
+}
+.title {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+.title h2 {
+    color: #2389FC;
+    font-weight: 500;
+
+}
+.stars-container {
+    display: flex;
+}
+.stars-container img {
+    width: 35px;
+    height: 30px;
+}
+.state{
+    font-weight: 600;
+}
+.occupied {
+    position: relative;
+    background-color: #001F3F;
+    border-radius: 37px;
+    padding: 33px;
+    box-sizing: content-box;
+}
+.occupied .userimage{
+    position: relative;
+    width: 153px;
+    height: 153px;
+    background-color: white;
+    border-radius: 50%;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
+.text-centered {
+    text-align: center;
+}
+.color-white {
+    color: white;
+}
+.occupied .userimage img{
+    width: 153px;
+    height: 153px;
+}
+.date {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+.contract-date {
+    min-width: fit-content;
+    flex: 1;
+    margin: 0px 5px;
+}
+
+.not-occupied {
+    background-color: #001F3F;
+    border-radius: 37px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.not-occupied h2{
+    margin: 0;
+}
+.promotion {
+    display: block;
+    background-color: #2389FC;
+    border-radius: 37px;
+    padding: 20px;
+}
+.promotion button{
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 175px;
+}
+.reviews-title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.reviews-title h2{
+    color: #2389FC;
+    margin-left: 5%;
+    margin-right: 2%;
+    margin-bottom: 0;
+}

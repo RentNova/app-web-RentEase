@@ -1,0 +1,53 @@
+h1 {font-size: 64px;}
+h2 {font-size: 32px;}
+h3 {font-size: 24px;}
+p, label{font-size: 16px;}
+h1{
+    margin: auto;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 10px;
+    line-height: 64px;
+}
+h2 {
+    line-height: 32px;
+    color: #2389FC;
+}
+.container{
+    padding: 121px 0 0 0;
+    width: 100%;
+    height: 100%;
+}
+div {
+    overflow: auto;
+}
+.headbar{
+    position: relative;
+    width: 100%;
+    height: 92px;
+    background-color: #001F3F;
+}
+.headbar{
+    overflow: visible;
+}
+.headbar > img {
+    position: relative;
+    float: left;
+    top:-10px;
+}
+.headbar > img:hover {
+    transform: scale(1.05);    
+}
+.headbar > img:active {
+    transform: scale(0.95);
+}
+.profile {    
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.profile h1 {
+    text-align: center;
+}

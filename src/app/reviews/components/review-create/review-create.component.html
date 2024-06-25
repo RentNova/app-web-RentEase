@@ -1,0 +1,22 @@
+<div class="review-create">
+    <mat-slider
+        class="example-margin"
+        [disabled]="false"
+        [max]="5"
+        [min]="0"
+        [step]="0.5"
+        [discrete]="false"
+        [showTickMarks]="false">
+        <input id="slider" matSliderThumb (input)="onSliderInput($event)" (click)="onSliderInput($event)">
+    </mat-slider>
+    <div class="stars-container">
+        <img *ngFor="let star of getStars(rating)" [src]="star.image" [alt]="star.alt">
+    </div>
+    <textarea type="text" id="review-content" [(ngModel)]="content" placeholder="Contenido" maxlength="1000" (input)="updateCharacterCount($event)"></textarea>
+    <p>{{ remainingCharacters }} carácteres restantes</p>
+
+    <div class="btns">
+        <button mat-button cdkFocusInitial (click)="createReview()">Enviar</button>
+        <button mat-button mat-dialog-close>Cancelar</button>
+    </div>
+</div>

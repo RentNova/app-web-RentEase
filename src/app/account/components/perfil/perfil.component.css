@@ -1,0 +1,113 @@
+h1 {font-size: 64px;}
+h2 {font-size: 32px;}
+h3 {font-size: 24px;}
+p, label{font-size: 16px;}
+h1{
+    margin: auto;
+    font-weight: 400;
+    color: #2389FC;
+    margin-bottom: 40px;
+    line-height: 64px;
+}
+h2 {
+    line-height: 32px;
+    color: #2389FC;
+}
+.container{
+    padding: 121px 0 0 0;
+    width: 100%;
+    height: 100%;
+}
+div {
+    overflow: auto;
+}
+.headbar{
+    position: relative;
+    width: 100%;
+    height: 295px;
+    background-color: #001F3F;
+}
+.headbar{
+    overflow: visible;
+}
+.headbar > img {
+    position: relative;
+    float: left;
+}
+.headbar > img:hover {
+    transform: scale(1.05);    
+}
+.headbar > img:active {
+    transform: scale(0.95);
+}
+.profile {    
+    position: absolute;
+    width: 400px;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 8px);
+
+}
+.profile img{
+    margin: auto;
+    display: block;
+    border-color: white;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 100%;
+    width: 153px;
+    height: 153px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.profile h1 {
+    text-align: center;
+}
+.profile h2 {
+    text-align: center;
+}
+.profileButtons{
+    position: relative;
+    display: block;
+    padding: 12px 0;
+    width: 100%;
+    text-align: center;
+}
+#btn-propiedades{
+    position: relative;
+    float: left;
+    margin-left: 32px;
+    font-size: 16px;
+}
+#btn-edit {
+    position: relative;
+    float: right;
+    margin-right: 32px;
+    font-size: 16px;
+}
+.options {
+    position: relative;
+    height: calc(100% - 384px);
+    margin: 20px auto 0 auto;
+    width: 70%;
+    border-radius: 20px 20px 0 0;
+    background-color: #001F3F;
+}
+.options h2 {
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+}
+.options h2:hover {
+    padding: 20px;
+    margin: 0;
+}
+.options h2:hover {
+    background-color: #158EB5;
+    border-width: 0;
+    color: white;
+}
+.options h2:active {
+    background-color: #1A588B;
+    border-width: 0;
+}
